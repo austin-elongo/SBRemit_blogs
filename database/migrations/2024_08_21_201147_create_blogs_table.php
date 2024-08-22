@@ -22,6 +22,7 @@ return new class extends Migration {
             $table->id();
             $table->string('title');
             $table->text('content');
+            $table->string('image')->nullable();
             $table->unsignedBigInteger('category_id');
             $table->string('image_path')->nullable();
             $table->timestamps();

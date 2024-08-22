@@ -1,0 +1,49 @@
+/* Global Styles */
+body {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Global Links */
+a {
+    color: #004d00; /* Dark Green */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Global Buttons */
+button, .btn {
+    background-color: #004d00; /* Dark Green */
+    color: white;
+    border: none;
+    border-radius: 5px; /* Slightly rounded */
+    padding: 10px 20px; /* Slightly bigger */
+    cursor: pointer;
+    font-size: 16px; /* Adjust as needed */
+}
+
+button:hover, .btn:hover {
+    background-color: #003300; /* Darker Green on hover */
+}
+
+/* Centered Content */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Gradient Tiles for Blog Posts */
+.blog-tile {
+    background: linear-gradient(to right, #e0f7fa, #b2dfdb); /* Light gradient */
+    border-radius: 10px; /* Slightly rounded */
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
