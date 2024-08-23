@@ -1,0 +1,166 @@
+.btn {
+    background-color: darkgreen;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 5px;
+}
+
+.card {
+    border-radius: 10px;
+    background: linear-gradient(135deg, #6b8e23, #556b2f);
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.content-centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    flex-direction: column;
+}
+
+
+/* Blog card styling */
+.blog-card {
+    background: #fff; /* White background for blog cards */
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 8px; /* Slightly rounded corners */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow */
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+/* Image styling */
+.blog-card img {
+    border-radius: 8px; /* Slightly rounded corners */
+    max-width: 100%; /* Ensure image is responsive */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Button styling */
+.btn-primary {
+    background-color: #006400; /* Dark green background */
+    border-color: #006400; /* Dark green border */
+    color: #fff; /* White text */
+}
+
+.btn-primary:hover {
+    background-color: #004d00; /* Darker green on hover */
+    border-color: #004d00; /* Darker green border on hover */
+}
+
+.btn-danger {
+    background-color: #dc3545; /* Default red background for delete button */
+    border-color: #dc3545; /* Default red border for delete button */
+    color: #fff; /* White text */
+}
+
+.btn-danger:hover {
+    background-color: #c82333; /* Darker red on hover */
+    border-color: #bd2130; /* Darker red border on hover */
+}
+/* General Styles */
+body {
+    font-family: 'Nunito', sans-serif; /* Stylish and readable font */
+    text-align: center; /* Center-aligns text globally */
+}
+
+.container {
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 1200px; /* Adjust max-width as needed */
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    font-size: 16px; /* Adjust size as needed */
+    padding: 10px 20px;
+    border-radius: 8px; /* Slightly rounded corners */
+    background-color: #004d00; /* Dark green */
+    color: white;
+    border: none;
+    text-decoration: none; /* Removes underline from links styled as buttons */
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn:hover {
+    background-color: #005700; /* Slightly lighter dark green on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Links */
+a {
+    color: #004d00; /* Dark green */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Navbar */
+.navbar-nav {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.navbar-brand {
+    font-size: 1.5rem; /* Adjust as needed */
+}
+
+/* Card Styles */
+.card {
+    border: none;
+    border-radius: 10px; /* Slightly rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.card-img-top {
+    width: 100%;
+    height: auto;
+}
+
+.card-body {
+    text-align: left; /* Align text inside the card to the left */
+}
+
+.card-title {
+    font-size: 1.25rem; /* Adjust as needed */
+    font-weight: bold;
+}
+
+.card-text {
+    font-size: 1rem; /* Adjust as needed */
+    line-height: 1.6;
+}
+
+/* Form Elements */
+form {
+    text-align: center; /* Center-aligns form elements */
+}
+
+input[type="text"], input[type="email"], textarea {
+    border-radius: 5px;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+input[type="submit"], button {
+    border-radius: 5px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #004d00; /* Dark green */
+    color: white;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover, button:hover {
+    background-color: #005700; /* Slightly lighter dark green on hover */
+}
