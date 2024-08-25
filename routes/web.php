@@ -3,7 +3,9 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\AdminController;
-use App\Http\Controllers\BlogController;
+use App\Http\Controllers\ItemController;
+
+Route::resource('items', ItemController::class);
 
 /*
 |--------------------------------------------------------------------------
@@ -16,25 +18,25 @@ use App\Http\Controllers\BlogController;
 |
 */
 
-// Homepage with blog list
-Route::get('/', [BlogController::class, 'index'])->name('home');
+// Homepage with item list
+Route::get('/', [ItemController::class, 'index'])->name('home');
 
 // Admin routes
 Route::get('admin/login', [AdminController::class, 'showLoginForm'])->name('admin.login');
 Route::post('admin/login', [AdminController::class, 'login']);
 Route::get('admin/dashboard', [AdminController::class, 'dashboard'])->middleware('auth')->name('admin.dashboard');
 
-// Admin routes for blogs
+// Admin routes for items
 Route::prefix('admin')->middleware('auth')->group(function () {
     Route::get('/dashboard', [AdminController::class, 'dashboard'])->name('admin.dashboard');
     
-    // CRUD operations for blogs
-    Route::get('/blogs', [BlogController::class, 'index'])->name('admin.blogs.index');
-    Route::get('/blogs/create', [BlogController::class, 'create'])->name('admin.blogs.create');
-    Route::post('/blogs', [BlogController::class, 'store'])->name('admin.blogs.store');
-    Route::get('/blogs/{id}/edit', [BlogController::class, 'edit'])->name('admin.blogs.edit');
-    Route::put('/blogs/{id}', [BlogController::class, 'update'])->name('admin.blogs.update');
-    Route::delete('/blogs/{id}', [BlogController::class, 'destroy'])->name('admin.blogs.destroy');
+    // CRUD operations for items
+    Route::get('/items', [ItemController::class, 'index'])->name('admin.items.index');
+    Route::get('/items/create', [ItemController::class, 'create'])->name('admin.items.create');
+    Route::post('/items', [ItemController::class, 'store'])->name('admin.items.store');
+    Route::get('/items/{id}/edit', [ItemController::class, 'edit'])->name('admin.items.edit');
+    Route::put('/items/{id}', [ItemController::class, 'update'])->name('admin.items.update');
+    Route::delete('/items/{id}', [ItemController::class, 'destroy'])->name('admin.items.destroy');
 });
 
 // Admin logout route
