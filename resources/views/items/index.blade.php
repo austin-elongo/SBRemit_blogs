@@ -1,6 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
+<link rel="stylesheet" href="{{ asset('css/app.css') }}">
+
 <div class="container">
     <h1>Items</h1>
     <a href="{{ route('items.create') }}" class="btn btn-primary mb-3">Create Item</a>
@@ -15,9 +17,9 @@
         @foreach($items as $item)
             <div class="col-md-4">
                 <div class="card mb-4">
+                    <h5 class="card-title">{{ $item->title }}</h5>
                     <img src="{{ asset('storage/' . $item->image) }}" class="card-img-top" alt="{{ $item->title }}">
                     <div class="card-body">
-                        <h5 class="card-title">{{ $item->title }}</h5>
                         <p class="card-text">{{ $item->description }}</p>
                         <a href="{{ route('items.edit', $item->id) }}" class="btn btn-primary">Edit</a>
                         <form action="{{ route('items.destroy', $item->id) }}" method="POST" class="d-inline-block">
